@@ -66,3 +66,14 @@ resource "volterra_k8s_cluster" "cluster" {
   }
   use_default_psp = true
 }
+
+resource "volterra_virtual_site" "vsite" {
+  name      = format("%s-k8s-vsite", var.name)
+  namespace = "shared"
+
+  site_selector {
+    expressions = ["${var.name} in (true)"]
+  }
+
+  site_type = "CUSTOMER_EDGE"
+}

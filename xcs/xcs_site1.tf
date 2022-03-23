@@ -2,6 +2,10 @@ resource "volterra_gcp_vpc_site" "site1" {
   name      = format("%s-vpc-site-one", var.name)
   namespace = "system"
 
+  labels = {
+    (var.name) = true
+  }
+
   cloud_credentials {
     name      = volterra_cloud_credentials.gcp_cc.name
     namespace = "system"

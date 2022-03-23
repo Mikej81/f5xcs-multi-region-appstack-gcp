@@ -17,32 +17,32 @@ variable "projectName" {
 variable "region_one" {
   type        = string
   description = "REQUIRED: GCP Region: "
-  default     = "us-east1"
+  default     = "us-east4"
 }
 variable "zone_one" {
   type        = string
   description = "REQUIRED: GCP Region: "
-  default     = "us-east1-b"
+  default     = "us-east4-a"
 }
 variable "region_two" {
   type        = string
   description = "REQUIRED: GCP Region: "
-  default     = "canadacentral"
+  default     = "us-west2"
 }
 variable "zone_two" {
   type        = string
   description = "REQUIRED: GCP Region: "
-  default     = "us-east1-b"
+  default     = "us-west2-a"
 }
 variable "region_three" {
   type        = string
   description = "REQUIRED: GCP Region: "
-  default     = "canadacentral"
+  default     = "europe-west3"
 }
 variable "zone_three" {
   type        = string
   description = "REQUIRED: GCP Region: "
-  default     = "us-east1-b"
+  default     = "europe-west3-a"
 }
 
 variable "sshPublicKey" {
@@ -91,7 +91,7 @@ variable "name" {
   default     = "callisto"
 }
 // Required Variable
-variable "volterra_tf_action" {
+variable "xcs_tf_action" {
   default = "plan"
 }
 variable "delegated_dns_domain" {
@@ -104,13 +104,7 @@ variable "api_url" {
   default     = "https://playground.console.ves.volterra.io/api"
 }
 
-variable "azure_client_id" { default = "" }
-variable "azure_client_secret" { default = "" }
-variable "azure_tenant_id" { default = "" }
-variable "azure_subscription_id" { default = "" }
-
 variable "gateway_type" { default = "voltstack_cluster" }
-variable "fleet_label" { default = "fleet_label" }
 
 # NETWORK
 // Required Variable

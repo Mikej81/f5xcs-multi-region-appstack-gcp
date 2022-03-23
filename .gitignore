@@ -30,3 +30,4 @@ prep.sh
 **/routes.json
 .pre-commit-config.yaml
 volterra_gcp_vpc_role.yaml
+key.json

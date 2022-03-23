@@ -45,6 +45,12 @@ variable "zone_three" {
   default     = "europe-west3-a"
 }
 
+variable "instance_type" {
+  type        = string
+  description = "REQUIRED: Instance Type"
+  default     = "n1-standard-4"
+}
+
 variable "sshPublicKey" {
   type        = string
   description = "OPTIONAL: ssh public key for instances"

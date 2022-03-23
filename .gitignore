@@ -31,3 +31,4 @@ prep.sh
 .pre-commit-config.yaml
 volterra_gcp_vpc_role.yaml
 key.json
+**/key.json

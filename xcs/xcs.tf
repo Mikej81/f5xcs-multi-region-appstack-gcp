@@ -57,7 +57,7 @@ resource "volterra_k8s_cluster" "cluster" {
 
   // One of the arguments from this list "cluster_scoped_access_permit cluster_scoped_access_deny" must be set
   cluster_scoped_access_permit = true
-  no_global_access             = true
+  global_access_enable         = true
   no_insecure_registries       = true
 
   local_access_config {
@@ -76,4 +76,14 @@ resource "volterra_virtual_site" "vsite" {
   }
 
   site_type = "CUSTOMER_EDGE"
+}
+
+resource "volterra_virtual_k8s" "vk8s" {
+  name = format("%s-vk8s", var.name)
+  #namespace = var.namespace
+  namespace = "default"
+  vsite_refs {
+    name      = volterra_virtual_site.vsite.name
+    namespace = "shared"
+  }
 }

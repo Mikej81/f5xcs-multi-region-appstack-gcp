@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+# Memes did some https://github.com/memes/terraform-google-volterra/blob/main/modules/service-account/main.tf
+# https://registry.terraform.io/modules/terraform-google-modules/service-accounts/google/latest
+# https://registry.terraform.io/modules/terraform-google-modules/iam/google/latest/submodules/custom_role_iam
+
 module "custom-roles" {
   source = "terraform-google-modules/iam/google//modules/custom_role_iam"
 

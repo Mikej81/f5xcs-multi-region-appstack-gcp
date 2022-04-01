@@ -23,8 +23,8 @@ module "xcs" {
   zone_one         = var.zone_one
   region_two       = var.region_two
   zone_two         = var.zone_two
-  region_three     = var.region_three
-  zone_three       = var.zone_three
+  # region_three     = var.region_three
+  # zone_three       = var.zone_three
   projectPrefix    = module.util.env_prefix
   sshPublicKeyPath = var.sshPublicKeyPath
   sshPublicKey     = var.sshPublicKey
@@ -34,6 +34,6 @@ module "xcs" {
   instance_type    = var.instance_type
   cidr_one         = var.cidr_one
   cidr_two         = var.cidr_two
-  cidr_three       = var.cidr_three
+  # cidr_three       = var.cidr_three
   tags             = var.tags
 }

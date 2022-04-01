@@ -34,16 +34,16 @@ variable "zone_two" {
   description = "REQUIRED: GCP Region: "
   default     = "us-west2-a"
 }
-variable "region_three" {
-  type        = string
-  description = "REQUIRED: GCP Region: "
-  default     = "europe-west3"
-}
-variable "zone_three" {
-  type        = string
-  description = "REQUIRED: GCP Region: "
-  default     = "europe-west3-a"
-}
+# variable "region_three" {
+#   type        = string
+#   description = "REQUIRED: GCP Region: "
+#   default     = "europe-west3"
+# }
+# variable "zone_three" {
+#   type        = string
+#   description = "REQUIRED: GCP Region: "
+#   default     = "europe-west3-a"
+# }
 
 variable "instance_type" {
   type        = string
@@ -94,7 +94,7 @@ variable "namespace" {
 variable "name" {
   type        = string
   description = "REQUIRED:  This is name for your deployment"
-  default     = "callisto"
+  default     = "cust-provided"
 }
 // Required Variable
 variable "xcs_tf_action" {
@@ -122,10 +122,10 @@ variable "cidr_two" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.2.0/23"
 }
-variable "cidr_three" {
-  description = "REQUIRED: VNET Network CIDR"
-  default     = "10.90.4.0/23"
-}
+# variable "cidr_three" {
+#  description = "REQUIRED: VNET Network CIDR"
+#  default     = "10.90.4.0/23"
+#}
 
 variable "gcp_subnet_one" {
   type        = map(string)
@@ -141,13 +141,13 @@ variable "gcp_subnet_two" {
     "external" = "10.90.2.0/24"
   }
 }
-variable "gcp_subnet_three" {
-  type        = map(string)
-  description = "REQUIRED: Subnet CIDRs"
-  default = {
-    "external" = "10.90.4.0/24"
-  }
-}
+# variable "gcp_subnet_three" {
+#  type        = map(string)
+#  description = "REQUIRED: Subnet CIDRs"
+#   default = {
+#     "external" = "10.90.4.0/24"
+#   }
+# }
 
 # TAGS
 variable "tags" {

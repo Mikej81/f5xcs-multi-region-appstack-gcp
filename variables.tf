@@ -151,10 +151,10 @@ variable "cidr_two" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.2.0/23"
 }
-# variable "cidr_three" {
-#  description = "REQUIRED: VNET Network CIDR"
-#  default     = "10.90.4.0/23"
-#}
+variable "cidr_three" {
+ description = "REQUIRED: VNET Network CIDR"
+ default     = "10.90.4.0/23"
+}
 
 variable "gcp_subnet_one" {
   type        = map(string)
@@ -170,13 +170,13 @@ variable "gcp_subnet_two" {
     "external" = "10.90.2.0/24"
   }
 }
-# variable "gcp_subnet_three" {
-#  type        = map(string)
-#  description = "REQUIRED: Subnet CIDRs"
-#   default = {
-#     "external" = "10.90.4.0/24"
-#   }
-# }
+variable "gcp_subnet_three" {
+ type        = map(string)
+ description = "REQUIRED: Subnet CIDRs"
+  default = {
+    "external" = "10.90.4.0/24"
+  }
+}
 
 # TAGS
 variable "tags" {

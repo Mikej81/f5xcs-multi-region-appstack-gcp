@@ -40,6 +40,6 @@ module "xcs" {
   instance_type    = var.instance_type
   cidr_one         = var.cidr_one
   cidr_two         = var.cidr_two
-  # cidr_three       = var.cidr_three
+  cidr_three       = var.cidr_three
   tags = var.tags
 }

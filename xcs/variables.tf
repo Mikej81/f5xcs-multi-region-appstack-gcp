@@ -26,4 +26,4 @@ variable "instance_type" {}
 variable "cidr_one" {}
 variable "cidr_two" {}
 variable "cidr_three" {}
-variable "gcp-creds" {}
+# variable "gcp-creds" {}

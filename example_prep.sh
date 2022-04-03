@@ -35,11 +35,11 @@
 #   fi
 # fi
 
-export VOLT_API_P12_FILE=../netta-gcp-appstack.p12
-export VES_P12_PASSWORD=XC12345
-export GCP_PROJECT=f5-gcs-4261-sales-na-central
-export GCP_ROLE_ID=volt_gcp_vpc_role
-export GCP_ACCOUNT_ID=volt-gcp-vpc-service-account
+export VOLT_API_P12_FILE=/creds/.api-creds.p12
+export VES_P12_PASSWORD=12345678
+export GCP_PROJECT=project_name
+export GCP_ROLE_ID=xcs_gcp_vpc_role
+export GCP_ACCOUNT_ID=xcs-gcp-vpc-spn
 
 # # Download Role Def
 # # Based on https://gitlab.com/volterra.io/cloud-credential-templates/-/tree/master/gcp

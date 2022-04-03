@@ -11,12 +11,6 @@ resource "volterra_gcp_vpc_site" "site3" {
     namespace = "system"
   }
 
-  # cloud_credentials {
-  #   name      = "netta-gcp-cc"
-  #   namespace = "system"
-  #   # tenant    = "acmecorp"
-  # }
-
   gcp_region    = var.region_three
   instance_type = var.instance_type
   ssh_key       = var.sshPublicKey

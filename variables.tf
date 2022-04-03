@@ -193,5 +193,3 @@ variable "tags" {
     delete      = "True"
   }
 }
-
-# variable "gcp-creds" {}

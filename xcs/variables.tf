@@ -9,9 +9,13 @@ variable "zone_one_a" {}
 variable "zone_one_b" {}
 variable "zone_one_c" {}
 variable "region_two" {}
-variable "zone_two" {}
-# variable "region_three" {}
-# variable "zone_three" {}
+variable "zone_two_a" {}
+variable "zone_two_b" {}
+variable "zone_two_c" {}
+variable "region_three" {}
+variable "zone_three_a" {}
+variable "zone_three_b" {}
+variable "zone_three_c" {}
 variable "gateway_type" {}
 variable "xcs_tf_action" {}
 variable "tags" {}
@@ -21,5 +25,5 @@ variable "xcs_tenant" {}
 variable "instance_type" {}
 variable "cidr_one" {}
 variable "cidr_two" {}
-# variable "cidr_three" {}
-# variable "gcp-creds" {}
+variable "cidr_three" {}
+variable "gcp-creds" {}

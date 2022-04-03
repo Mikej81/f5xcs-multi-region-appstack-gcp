@@ -39,22 +39,41 @@ variable "region_two" {
   description = "REQUIRED: GCP Region: "
   default     = "us-west2"
 }
-variable "zone_two" {
+variable "zone_two_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2-a"
 }
-# variable "region_three" {
-#   type        = string
-#   description = "REQUIRED: GCP Region: "
-#   default     = "europe-west3"
-# }
-# variable "zone_three" {
-#   type        = string
-#   description = "REQUIRED: GCP Region: "
-#   default     = "europe-west3-a"
-# }
-
+variable "zone_two_b" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-west2-b"
+}
+variable "zone_two_c" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-west2-c"
+}
+variable "region_three" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "europe-west3"
+}
+variable "zone_three_a" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "europe-west3-a"
+}
+variable "zone_three_b" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "europe-west3-b"
+}
+variable "zone_three_c" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "europe-west3-c"
+}
 variable "instance_type" {
   type        = string
   description = "REQUIRED: Instance Type"

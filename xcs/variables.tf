@@ -5,7 +5,9 @@ variable "projectPrefix" {}
 variable "url" {}
 variable "api_p12_file" {}
 variable "region_one" {}
-variable "zone_one" {}
+variable "zone_one_a" {}
+variable "zone_one_b" {}
+variable "zone_one_c" {}
 variable "region_two" {}
 variable "zone_two" {}
 # variable "region_three" {}
@@ -20,3 +22,4 @@ variable "instance_type" {}
 variable "cidr_one" {}
 variable "cidr_two" {}
 # variable "cidr_three" {}
+# variable "gcp-creds" {}

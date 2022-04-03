@@ -8,9 +8,9 @@ variable "adminUserName" {
 
 // Required Variable
 variable "projectName" {
-  type        = string
-  description = "REQUIRED: GCP project: "
-  default     = "project-name"
+  # type        = string
+  # description = "REQUIRED: GCP project: "
+  # default     = "project-name"
 }
 
 // Required Variable
@@ -19,10 +19,20 @@ variable "region_one" {
   description = "REQUIRED: GCP Region: "
   default     = "us-east4"
 }
-variable "zone_one" {
+variable "zone_one_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4-a"
+}
+variable "zone_one_b" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-east4-b"
+}
+variable "zone_one_c" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-east4-c"
 }
 variable "region_two" {
   type        = string
@@ -164,3 +174,5 @@ variable "tags" {
     delete      = "True"
   }
 }
+
+# variable "gcp-creds" {}

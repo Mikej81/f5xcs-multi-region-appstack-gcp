@@ -1,69 +1,75 @@
-resource "volterra_gcp_vpc_site" "site2" {
-  name      = format("%s-vpc-site-two", var.name)
-  namespace = "system"
+# resource "volterra_gcp_vpc_site" "site2" {
+#   name      = format("%s-vpc-site-two", var.name)
+#   namespace = "system"
 
-  labels = {
-    (var.name) = true
-  }
+#   labels = {
+#     (var.name) = true
+#   }
 
-  cloud_credentials {
-    name      = volterra_cloud_credentials.gcp_cc.name
-    namespace = "system"
-  }
+# #   cloud_credentials {
+# #     name      = var.gcp-creds
+# #     namespace = "system"
+# #   }
 
-  gcp_region    = var.region_two
-  instance_type = var.instance_type
-  ssh_key       = var.sshPublicKey
+#   cloud_credentials {
+#     name      = "netta-gcp-cc"
+#     namespace = "system"
+#     # tenant    = "acmecorp"
+#   }
 
-  logs_streaming_disabled = true
+#   gcp_region    = var.region_two
+#   instance_type = var.instance_type
+#   ssh_key       = var.sshPublicKey
 
-  voltstack_cluster {
-    gcp_certified_hw = "gcp-byol-voltstack-combo"
+#   logs_streaming_disabled = true
 
-    gcp_zone_names = [var.zone_two]
+#   voltstack_cluster {
+#     gcp_certified_hw = "gcp-byol-voltstack-combo"
 
-    node_number = "3"
+#     gcp_zone_names = [var.zone_two]
 
-    site_local_network {
-      new_network_autogenerate {
-        autogenerate = true
-      }
-    }
-    site_local_subnet {
-      new_subnet {
-        subnet_name  = format("%s-subnet-two", var.name)
-        primary_ipv4 = var.cidr_two
-      }
-    }
+#     node_number = "3"
 
-    global_network_list {
-      global_network_connections {
-        slo_to_global_dr {
-          global_vn {
-            namespace = "system"
-            name      = volterra_virtual_network.global.name
-          }
-        }
-      }
+#     site_local_network {
+#       new_network_autogenerate {
+#         autogenerate = true
+#       }
+#     }
+#     site_local_subnet {
+#       new_subnet {
+#         subnet_name  = format("%s-subnet-two", var.name)
+#         primary_ipv4 = var.cidr_two
+#       }
+#     }
 
-    }
+#     global_network_list {
+#       global_network_connections {
+#         slo_to_global_dr {
+#           global_vn {
+#             namespace = "system"
+#             name      = volterra_virtual_network.global.name
+#           }
+#         }
+#       }
 
-    no_network_policy        = true
-    no_forward_proxy         = true
-    no_outside_static_routes = true
-    #no_k8s_cluster           = true
-    #default_storage          = ""
-    k8s_cluster {
-      namespace = "system"
-      name      = volterra_k8s_cluster.cluster.name
-    }
-  }
+#     }
 
-}
+#     no_network_policy        = true
+#     no_forward_proxy         = true
+#     no_outside_static_routes = true
+#     #no_k8s_cluster           = true
+#     #default_storage          = ""
+#     k8s_cluster {
+#       namespace = "system"
+#       name      = volterra_k8s_cluster.cluster.name
+#     }
+#   }
 
-resource "volterra_tf_params_action" "action2" {
-  site_name       = volterra_gcp_vpc_site.site2.name
-  site_kind       = "gcp_vpc_site"
-  action          = var.xcs_tf_action
-  wait_for_action = true
-}
+# }
+
+# resource "volterra_tf_params_action" "action2" {
+#   site_name       = volterra_gcp_vpc_site.site2.name
+#   site_kind       = "gcp_vpc_site"
+#   action          = var.xcs_tf_action
+#   wait_for_action = true
+# }

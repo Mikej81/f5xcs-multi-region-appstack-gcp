@@ -6,9 +6,15 @@ resource "volterra_gcp_vpc_site" "site1" {
     (var.name) = true
   }
 
+  # cloud_credentials {
+  #   name      = volterra_cloud_credentials.gcp_cc.name
+  #   namespace = "system"
+  # }
+
   cloud_credentials {
-    name      = volterra_cloud_credentials.gcp_cc.name
+    name      = "netta-gcp-cc"
     namespace = "system"
+    # tenant    = "acmecorp"
   }
 
   gcp_region    = var.region_one
@@ -20,7 +26,8 @@ resource "volterra_gcp_vpc_site" "site1" {
   voltstack_cluster {
     gcp_certified_hw = "gcp-byol-voltstack-combo"
 
-    gcp_zone_names = [var.zone_one]
+    gcp_zone_names = [var.zone_one_a, var.zone_one_b, var.zone_one_c]
+    # gcp_zone_names = ["us-west1-a, us-west1-b, us-west1-c"]
 
     node_number = "3"
 

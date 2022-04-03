@@ -6,16 +6,16 @@ resource "volterra_gcp_vpc_site" "site3" {
     (var.name) = true
   }
 
-#   cloud_credentials {
-#     name      = volterra_cloud_credentials.gcp_cc.name
-#     namespace = "system"
-#   }
-
   cloud_credentials {
-    name      = "netta-gcp-cc"
+    name      = volterra_cloud_credentials.gcp_cc.name
     namespace = "system"
-    # tenant    = "acmecorp"
   }
+
+  # cloud_credentials {
+  #   name      = "netta-gcp-cc"
+  #   namespace = "system"
+  #   # tenant    = "acmecorp"
+  # }
 
   gcp_region    = var.region_three
   instance_type = var.instance_type

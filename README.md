@@ -1,6 +1,6 @@
 # f5xcs-multi-region-appstack-gcp
 
-This is a non-official F5 repository.  This repo is not supported by F5 or DevCentral in anyway!
+This is a non-official F5 repository.  This repo is not supported by F5 or DevCentral!
 
 This repo will provide a solution for deploying F5 XCS Multi-Region Multi-Zone AppStack in GCP.
 

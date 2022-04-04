@@ -39,7 +39,7 @@ The goal of this solution is to provide a working demo for deploying AppStack on
         - Allowed Verbs:create, bind, escalate
 - Add Cluster Role Bidning for user.  Select ves-io-admin-cluster-role.
     - Subject - email of user account
-- Run example_pre.sh
+- Run example_prep.sh
 - Export variables:
     - export VOLT_API_P12_FILE=/creds/.api-creds.p12
     - export VES_P12_PASSWORD=12345678

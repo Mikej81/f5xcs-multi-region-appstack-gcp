@@ -71,7 +71,7 @@ The goal of this solution is to provide a working demo for deploying AppStack on
 
 ## Deployment
 
-For deployment you can do the traditional terraform commands or use the provided scripts.
+For deployment you can do the traditional terraform commands.
 
 ```bash
 terraform init

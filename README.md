@@ -62,9 +62,9 @@ The goal of this solution is to provide a working demo for deploying AppStack on
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 2.30.0 |
-| <a name="requirement_http"></a> [http](#requirement\_http) | 2.1.0 |
-| <a name="requirement_volterrarm"></a> [volterrarm](#requirement\_volterrarm) | 0.7.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | ~> 4.15.0 |
+| <a name="requirement_http"></a> [http](#requirement\_http) | 2.1.1 |
+| <a name="requirement_volterrarm"></a> [volterrarm](#requirement\_volterrarm) | 0.11.6 |
 
 ## Providers
 

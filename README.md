@@ -20,6 +20,7 @@ The goal of this solution is to provide a working demo for deploying AppStack on
 ## To do
 
 - Add cluster role with proper policy rules.
+    - Create a tfvars file or override.tf
     - URL List
         - URLs:*
         - Allowed Verbs:*

@@ -76,5 +76,5 @@ For deployment you can do the traditional terraform commands.
 ```bash
 terraform init
 terraform plan
-terraform apply
+terraform apply --auto-approve
 ```

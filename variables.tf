@@ -184,7 +184,7 @@ variable "tags" {
   type        = map(string)
   default = {
     purpose     = "public"
-    environment = "azure"
+    environment = "gcp"
     owner       = "f5owner"
     group       = "f5group"
     costcenter  = "f5costcenter"

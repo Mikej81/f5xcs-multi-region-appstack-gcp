@@ -15,10 +15,13 @@ module "xcs" {
   source = "./xcs"
 
   name             = var.name
+  name2            = var.name2
   namespace        = var.namespace
+  stack_name       = var.stack_name
   projectName      = var.projectName
   url              = var.api_url
   api_p12_file     = var.api_p12_file
+  tenant           = var.tenant
   region_one       = var.region_one
   zone_one_a       = var.zone_one_a
   zone_one_b       = var.zone_one_b
@@ -41,5 +44,6 @@ module "xcs" {
   cidr_one         = var.cidr_one
   cidr_two         = var.cidr_two
   cidr_three       = var.cidr_three
-  tags = var.tags
+  tags             = var.tags
+
 }

@@ -1,4 +1,5 @@
 variable "name" {}
+variable "name2" {}
 variable "namespace" {}
 variable "projectName" {}
 variable "projectPrefix" {}
@@ -26,3 +27,6 @@ variable "instance_type" {}
 variable "cidr_one" {}
 variable "cidr_two" {}
 variable "cidr_three" {}
+variable "tenant" {}
+variable "stack_name" {}
+

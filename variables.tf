@@ -12,7 +12,16 @@ variable "projectName" {
   # description = "REQUIRED: GCP project: "
   # default     = "project-name"
 }
-
+variable "tenant" {
+  # type        = string
+  # description = "REQUIRED: GCP project: "
+  # default     = "xc tenant id"
+}
+variable "stack_name" {
+  # type        = string
+  # description = "REQUIRED: GCP project: "
+  # default     = "xc tenant id"
+}
 // Required Variable
 variable "region_one" {
   type        = string
@@ -125,6 +134,11 @@ variable "name" {
   description = "REQUIRED:  This is name for your deployment"
   default     = "cust-provided"
 }
+variable "name2" {
+  type        = string
+  description = "REQUIRED:  This is name for your deployment"
+  default     = "cust-provided"
+}
 // Required Variable
 variable "xcs_tf_action" {
   default = "plan"
@@ -152,8 +166,8 @@ variable "cidr_two" {
   default     = "10.90.2.0/23"
 }
 variable "cidr_three" {
- description = "REQUIRED: VNET Network CIDR"
- default     = "10.90.4.0/23"
+  description = "REQUIRED: VNET Network CIDR"
+  default     = "10.90.4.0/23"
 }
 
 variable "gcp_subnet_one" {
@@ -171,8 +185,8 @@ variable "gcp_subnet_two" {
   }
 }
 variable "gcp_subnet_three" {
- type        = map(string)
- description = "REQUIRED: Subnet CIDRs"
+  type        = map(string)
+  description = "REQUIRED: Subnet CIDRs"
   default = {
     "external" = "10.90.4.0/24"
   }

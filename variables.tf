@@ -8,20 +8,20 @@ variable "adminUserName" {
 
 // Required Variable
 variable "projectName" {
-  # type        = string
-  # description = "REQUIRED: GCP project: "
-  # default     = "project-name"
+  type        = string
+  description = "REQUIRED: GCP project: "
+  default     = "project-name"
 }
 variable "tenant" {
-  # type        = string
-  # description = "REQUIRED: GCP project: "
-  # default     = "xc tenant id"
+  type        = string
+  description = "REQUIRED: GCP project: "
+  default     = "xc tenant id"
 }
-variable "stack_name" {
-  # type        = string
-  # description = "REQUIRED: GCP project: "
-  # default     = "xc tenant id"
-}
+# variable "stack_name" {
+#    type        = string
+#    description = "REQUIRED: GCP project: "
+#    default     = "xc tenant id"
+# }
 // Required Variable
 variable "region_one" {
   type        = string
@@ -87,7 +87,7 @@ variable "instance_type" {
   type        = string
   description = "REQUIRED: Instance Type"
   #default     = "n1-standard-4"
-  default     = "n1-standard-8"
+  default = "n1-standard-8"
 }
 
 variable "sshPublicKey" {
@@ -207,4 +207,11 @@ variable "tags" {
     creator     = "Terraform"
     delete      = "True"
   }
+}
+
+#Coleman Added for Agility
+
+variable "agility_namespaces" {
+  type    = number
+  default = 350
 }

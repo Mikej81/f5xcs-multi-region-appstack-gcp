@@ -130,7 +130,7 @@ resource "volterra_k8s_cluster_role" "role" {
         resource_types = ["*"]
 
         resource_instances = ["*"]
-       }
+      }
       # non_resource_url_list {
       #   urls = ["*"]
 
@@ -167,46 +167,21 @@ resource "volterra_virtual_site" "vsite" {
   site_type = "CUSTOMER_EDGE"
 }
 
+## Coleman added / edited for Agility
+resource "volterra_namespace" "namespace" {
+  count = var.agility_namespaces
+  name  = count.index
+
+}
+
 resource "volterra_virtual_k8s" "vk8s" {
-  name      = format("%s-vk8s", var.name)
-  namespace = var.namespace
-  # namespace = "default"
+  count     = var.agility_namespaces
+  name      = format("%s-vk8s-${count.index}", var.name)
+  namespace = count.index
+
   vsite_refs {
     name      = volterra_virtual_site.vsite.name
     namespace = "shared"
   }
 }
-
-# resource "volterra_voltstack_site" "netta-gcp-mz-stack" {
-#   name      = var.stack_name
-#   namespace = "system"
-
-#   // One of the arguments from this list "no_bond_devices bond_device_list" must be set
-#   no_bond_devices = true
-
-#   // One of the arguments from this list "disable_gpu enable_gpu enable_vgpu" must be set
-#   disable_gpu = true
-
-#   // One of the arguments from this list "no_k8s_cluster k8s_cluster" must be set
-#   # no_k8s_cluster = true
-#   k8s_cluster {
-#     tenant    = "f5-amer-ent-qyyfhhfj"
-#     namespace = "system"
-#     name      = "netta-k8s-cluster"
-#   }
-
-#   // One of the arguments from this list "logs_streaming_disabled log_receiver" must be set
-#   logs_streaming_disabled = true
-
-#   master_nodes = ["master-0", "master-1", "master-2"]
-
-#   // One of the arguments from this list "custom_network_config default_network_config" must be set
-#   default_network_config = true
-
-#   // One of the arguments from this list "default_storage_config custom_storage_config" must be set
-#   default_storage_config = true
-
-#   // One of the arguments from this list "deny_all_usb allow_all_usb usb_policy" must be set
-#   deny_all_usb          = true
-#   volterra_certified_hw = "generic-single-nic-voltstack-combo"
-# }
+## End Coleman Added / Edited

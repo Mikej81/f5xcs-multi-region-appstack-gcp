@@ -213,5 +213,5 @@ variable "tags" {
 
 variable "agility_namespaces" {
   type    = number
-  default = 350
+  default = 50
 }

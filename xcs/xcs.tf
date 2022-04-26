@@ -170,14 +170,14 @@ resource "volterra_virtual_site" "vsite" {
 ## Coleman added / edited for Agility
 resource "volterra_namespace" "namespace" {
   count = var.agility_namespaces
-  name  = count.index
+  name  = "3${format("%02d", count.index)}"
 
 }
 
 resource "volterra_virtual_k8s" "vk8s" {
   count     = var.agility_namespaces
-  name      = format("%s-vk8s-${count.index}", var.name)
-  namespace = count.index
+  name      = format("%s-vk8s-3${format("%02d", count.index)}", var.name)
+  namespace = "3${format("%02d", count.index)}"
 
   vsite_refs {
     name      = volterra_virtual_site.vsite.name

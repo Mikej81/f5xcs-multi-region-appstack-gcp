@@ -17,7 +17,7 @@ module "xcs" {
   name      = var.name
   name2     = var.name2
   namespace = var.namespace
-  #stack_name         = var.stack_name
+  stack_name         = var.stack_name
   projectName        = var.projectName
   url                = var.api_url
   api_p12_file       = var.api_p12_file

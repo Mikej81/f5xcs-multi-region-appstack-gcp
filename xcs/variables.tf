@@ -28,6 +28,6 @@ variable "cidr_one" {}
 variable "cidr_two" {}
 variable "cidr_three" {}
 variable "tenant" {}
-# variable "stack_name" {}
+variable "stack_name" {}
 variable "agility_namespaces" {}
 

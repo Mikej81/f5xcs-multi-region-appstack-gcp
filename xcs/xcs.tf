@@ -189,8 +189,8 @@ resource "volterra_virtual_site" "vsite" {
 
 resource "volterra_virtual_k8s" "vk8s" {
   name = format("%s-vk8s", var.name)
-  #namespace = var.namespace
-  namespace = "default"
+  # namespace = var.namespace
+  namespace = "s-iannetta"
   vsite_refs {
     name      = volterra_virtual_site.vsite.name
     namespace = "shared"

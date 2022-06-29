@@ -72,7 +72,6 @@ The goal of this solution is to provide the infrastructure for a working demo to
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | <a name="input_tenant_name"></a> [tenant\_name](#input\_tenant\_name) | REQUIRED:  This is your Volterra Tenant Name:  https://<tenant\_name>.console.ves.volterra.io/api | `string` | `"f5-sa"` |
-| <a name="input_adminUserName"></a> [adminUserName](#input\_adminUserName) | REQUIRED: Admin Username for All systems | `string` | `"xadmin"` |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | REQUIRED:  This is your Volterra Namespace | `string` | `"m-coleman"` |
 | <a name="input_api_cert"></a> [api\_cert](#input\_api\_cert) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/api2.cer"` |
 | <a name="input_location"></a> [location](#input\_location) | REQUIRED: Azure Region: usgovvirginia, usgovarizona, etc. For a list of available locations for your subscription use `az account list-locations -o table` | `string` | `"canadacentral"` |

@@ -36,20 +36,21 @@ The goal of this solution is to provide the infrastructure for a working demo to
             - Allowed Verbs:create, bind, escalate
     - Add Cluster Role Bidning for user.  Select ves-io-admin-cluster-role.
         - Subject - email of user account
-- Run example_prep.sh
-- Export variables:
-    - export VOLT_API_P12_FILE=/creds/.api-creds.p12
-    - export VES_P12_PASSWORD=12345678
-    - export GCP_PROJECT=project_name
-    - export GCP_ROLE_ID=xcs_gcp_vpc_role
-    - export GCP_ACCOUNT_ID=xcs-gcp-vpc-spn
-- Validate GCP Role ID and Account ID were created in proper project
-- Deploy with terraform code:
-    - terraform init
-    - terraform plan
-    - terraform apply --auto-approve
-- Destroy with terraform:
-    - terraform destroy --auto-approve
+- Infrastructure buildout in GCP
+    - Run example_prep.sh
+    - Export variables:
+        - export VOLT_API_P12_FILE=/creds/.api-creds.p12
+        - export VES_P12_PASSWORD=12345678
+        - export GCP_PROJECT=project_name
+        - export GCP_ROLE_ID=xcs_gcp_vpc_role
+        - export GCP_ACCOUNT_ID=xcs-gcp-vpc-spn
+    - Validate GCP Role ID and Account ID were created in proper project
+    - Deploy with terraform code:
+        - terraform init
+        - terraform plan
+        - terraform apply --auto-approve
+    - Destroy with terraform:
+        - terraform destroy --auto-approve
 
 ![Rough Diagram](/images/gcp-appstack.png)
 

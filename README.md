@@ -136,6 +136,8 @@ For auto deployment you can do with the deploy.sh and destroy.sh scripts.
 
 ## Troubleshooting
 
+Please refer to the [F5 terraform registry](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
+
 AS, DO, and runtime-init are rendered under ./debug for review.  AS3 seems to occasionally fail on example partition, but is easily resolved with postman.  Working on resolution.
 
 Currently getting 503 from Volterra, LTM shows now traffic reaching it, so probably a UDR issue.  Working on resultion.

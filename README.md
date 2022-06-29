@@ -19,22 +19,23 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 ## To do
 
-- Add cluster role with proper policy rules.
-    - Create a tfvars file or override.tf
-    - URL List
-        - URLs:*
-        - Allowed Verbs:*
-    - Resource List
-        - API Groups:*
-        - Resource Types:*
-        - Allowed Verbs:*
-    - Resource List
-        - API Groups:rbac.authorization.k8s.io
-        - Resource Types:rolebindings, clusterroles, clusterrolebindings
-        - Resource Instances:admin, edit, view
-        - Allowed Verbs:create, bind, escalate
-- Add Cluster Role Bidning for user.  Select ves-io-admin-cluster-role.
-    - Subject - email of user account
+- Optional step (to run Managed or Physical k8s):
+    - Add cluster role with proper policy rules.
+        - Create a tfvars file or override.tf
+        - URL List
+            - URLs:*
+            - Allowed Verbs:*
+        - Resource List
+            - API Groups:*
+            - Resource Types:*
+            - Allowed Verbs:*
+        - Resource List
+            - API Groups:rbac.authorization.k8s.io
+            - Resource Types:rolebindings, clusterroles, clusterrolebindings
+            - Resource Instances:admin, edit, view
+            - Allowed Verbs:create, bind, escalate
+    - Add Cluster Role Bidning for user.  Select ves-io-admin-cluster-role.
+        - Subject - email of user account
 - Run example_prep.sh
 - Export variables:
     - export VOLT_API_P12_FILE=/creds/.api-creds.p12

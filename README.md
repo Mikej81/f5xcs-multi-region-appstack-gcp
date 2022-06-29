@@ -100,7 +100,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 | <a name="gcp_region_three_zone_c"></a> [gcp_region_three_zone_c](#inputs\_gcp\_region\_three\_zone\_c) | REQUIRED:  This is your GCP Region Three Zone C| `string` | `"us-europe-west3c"` |
 | <a name="gcp_instance_type"></a> [gcp_instance_type](#inputs\_gcp\_instance\_type) | REQUIRED:  This is your GCP Instance Type | `string` | `"n1-stnadard-4"` |
 | <a name="input_sshPublicKey"></a> [sshPublicKey](#input\_sshPublicKey) | OPTIONAL: ssh public key for instances | `string` | `""` |
-| <a name="input_api_p12_file"></a> [api\_p12\_file](#input\_api\_p12\_file) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/f5-sa.console.ves.volterra.io.api-creds.p12"` |
+| <a name="input_api_p12_file"></a> [api\_p12\_file](#input\_api\_p12\_file) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/f5-xc-lab-app.console.ves.volterra.io.api-creds.p12"` |
 | <a name="input_sshPublicKeyPath"></a> [sshPublicKeyPath](#input\_sshPublicKeyPath) | OPTIONAL: ssh public key path for instances | `string` | `"./creds/id_rsa.pub"` |
 | <a name="input_api_key"></a> [api\_key](#input\_api\_key) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/api.key"` |
 

@@ -89,15 +89,17 @@ The goal of this solution is to provide the infrastructure for a working demo to
 | <a name="gcp_region_one"></a> [gcp_region_one](#inputs\_gcp\_region\_one) | REQUIRED:  This is your GCP Region One | `string` | `"us-east4"` |
 | <a name="gcp_region_one_zone_a"></a> [gcp_region_one_zone_a](#inputs\_gcp\_region\_one\_zone\_a) | REQUIRED:  This is your GCP Region One Zone A| `string` | `"us-east4a"` |
 | <a name="gcp_region_one_zone_b"></a> [gcp_region_one_zone_b](#inputs\_gcp\_region\_one\_zone\_b) | REQUIRED:  This is your GCP Region One Zone B| `string` | `"us-east4b"` |
-| <a name="gcp_region_one_zone_c"></a> [gcp_region_one_zone_c](#inputs\_gcp\_region\_one\_zone\_c) | REQUIRED:  This is your GCP Region One Zone c| `string` | `"us-east4c"` |
+| <a name="gcp_region_one_zone_c"></a> [gcp_region_one_zone_c](#inputs\_gcp\_region\_one\_zone\_c) | REQUIRED:  This is your GCP Region One Zone C| `string` | `"us-east4c"` |
 | <a name="gcp_region_two"></a> [gcp_region_two](#inputs\_gcp\_region\_two) | REQUIRED:  This is your GCP Region One | `string` | `"us-west2"` |
 | <a name="gcp_region_one_zone_a"></a> [gcp_region_two_zone_a](#inputs\_gcp\_region\_two\_zone\_a) | REQUIRED:  This is your GCP Region Two Zone A| `string` | `"us-west2a"` |
 | <a name="gcp_region_one_zone_b"></a> [gcp_region_two_zone_b](#inputs\_gcp\_region\_two\_zone\_b) | REQUIRED:  This is your GCP Region Two Zone B| `string` | `"us-west2b"` |
-| <a name="gcp_region_one_zone_c"></a> [gcp_region_two_zone_c](#inputs\_gcp\_region\_two\_zone\_c) | REQUIRED:  This is your GCP Region Two Zone c| `string` | `"us-west2c"` |
+| <a name="gcp_region_one_zone_c"></a> [gcp_region_two_zone_c](#inputs\_gcp\_region\_two\_zone\_c) | REQUIRED:  This is your GCP Region Two Zone C| `string` | `"us-west2c"` |
 | <a name="gcp_region_three"></a> [gcp_region_three](#inputs\_gcp\_region\_three) | REQUIRED:  This is your GCP Region One | `string` | `"europe-west3"` |
 | <a name="gcp_region_three_zone_a"></a> [gcp_region_three_zone_a](#inputs\_gcp\_region\_three\_zone\_a) | REQUIRED:  This is your GCP Region Three Zone A| `string` | `"us-europe-west3a"` |
 | <a name="gcp_region_three_zone_b"></a> [gcp_region_three_zone_b](#inputs\_gcp\_region\_three\_zone\_b) | REQUIRED:  This is your GCP Region Three Zone B| `string` | `"us-europe-west3b"` |
-| <a name="gcp_region_three_zone_c"></a> [gcp_region_three_zone_c](#inputs\_gcp\_region\_three\_zone\_c) | REQUIRED:  This is your GCP Region Three Zone c| `string` | `"us-europe-west3c"` |
+| <a name="gcp_region_three_zone_c"></a> [gcp_region_three_zone_c](#inputs\_gcp\_region\_three\_zone\_c) | REQUIRED:  This is your GCP Region Three Zone C| `string` | `"us-europe-west3c"` |
+| <a name="gcp_instance_type"></a> [gcp_instance_type](#inputs\_gcp\_instance\_type) | REQUIRED:  This is your GCP Instance Type | `string` | `"n1-stnadard-4"` |
+
 <!-- | <a name="input_location"></a> [location](#input\_location) | REQUIRED: Azure Region: usgovvirginia, usgovarizona, etc. For a list of available locations for your subscription use `az account list-locations -o table` | `string` | `"canadacentral"` | -->
 <!-- | <a name="input_name"></a> [name](#input\_name) | REQUIRED:  This is name for your deployment | `string` | `"user-defined"` |
 | <a name="input_api_url"></a> [api\_url](#input\_api\_url) | REQUIRED:  This is your Volterra Namespace | `string` | `"https://f5-sa.console.ves.volterra.io/api"` |

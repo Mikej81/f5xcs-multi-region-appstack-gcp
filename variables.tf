@@ -86,8 +86,8 @@ variable "zone_three_c" {
 variable "instance_type" {
   type        = string
   description = "REQUIRED: Instance Type"
-  #default     = "n1-standard-4"
-  default = "n1-standard-8"
+  default     = "n1-standard-4"
+  #default = "n1-standard-8"
 }
 
 variable "sshPublicKey" {

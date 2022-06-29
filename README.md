@@ -19,7 +19,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 ## To do
 
-- Optional step (to run Managed or Physical k8s):
+- Optional step (if you plan to run Managed or Physical k8s):
     - Add cluster role with proper policy rules.
         - Create a tfvars file or override.tf
         - URL List

@@ -138,7 +138,7 @@ For auto deployment you can do with the deploy.sh and destroy.sh scripts.
 
 Please refer to the following: 
 - Terraform
-    - [F5 distributed cloud terraform registry](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
+    - [F5 Distributed Cloud Terraform Registry](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
 - F5 Distributed Cloud
     - [F5 Distributed Cloud](https://docs.cloud.f5.com/docs/)
 
@@ -156,7 +156,7 @@ Please refer to the [F5 DevCentral Community Code of Conduct](code_of_conduct.md
 
 ## Copyright
 
-Copyright 2014-2020 F5 Networks Inc.
+Copyright 2014-2022 F5 Networks Inc.
 
 ### F5 Networks Contributor License Agreement
 

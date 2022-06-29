@@ -20,7 +20,7 @@ variable "tenant" {
 variable "stack_name" {
   type        = string
   description = "REQUIRED: GCP project: "
-  default     = "xc tenant id"
+  default     = "gcp-app-stack"
 }
 // Required Variable
 variable "region_one" {

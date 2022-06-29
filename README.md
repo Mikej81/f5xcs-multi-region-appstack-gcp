@@ -11,6 +11,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 - [F5 Distributed Cloud GCP AppStack Multi-Region and Multi-Zone Deployment](#f5-distribued-cloud-gcp-appstack-multi-region-and-multi-zone-deployment)
   - [To do](#to-do)
+  - [High Level Topology](#topology)
   - [Requirements](#requirements)
   - [Modules](#modules)
   - [Deployment](#deployment)
@@ -53,6 +54,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
     - Create a tfvars file or override.tf
     - Manully or Auto Deploy (see [Deployment](#deployment) options below):
 
+## Topology
 ![Rough Diagram](/images/gcp-appstack.png)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

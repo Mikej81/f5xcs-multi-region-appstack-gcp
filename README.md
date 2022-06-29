@@ -21,7 +21,6 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 - Optional step (if you plan to run Managed or Physical k8s):
     - Add cluster role with proper policy rules.
-        - Create a tfvars file or override.tf
         - URL List
             - URLs:*
             - Allowed Verbs:*
@@ -45,6 +44,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
         - export GCP_ROLE_ID=xcs_gcp_vpc_role
         - export GCP_ACCOUNT_ID=xcs-gcp-vpc-spn
     - Validate GCP Role ID and Account ID were created in proper project
+    - Create a tfvars file or override.tf
     - Manully or Auto Deploy (see [Deployment](#deployment) options below):
 
 ![Rough Diagram](/images/gcp-appstack.png)

@@ -14,9 +14,9 @@ module "util" {
 module "xcs" {
   source = "./xcs"
 
-  name      = var.name
-  name2     = var.name2
-  namespace = var.namespace
+  name               = var.name
+  name2              = var.name2
+  namespace          = var.namespace
   stack_name         = var.stack_name
   projectName        = var.projectName
   url                = var.api_url

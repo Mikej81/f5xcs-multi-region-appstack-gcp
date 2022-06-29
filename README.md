@@ -45,12 +45,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
         - export GCP_ROLE_ID=xcs_gcp_vpc_role
         - export GCP_ACCOUNT_ID=xcs-gcp-vpc-spn
     - Validate GCP Role ID and Account ID were created in proper project
-    - Deploy with terraform code:
-        - terraform init
-        - terraform plan
-        - terraform apply --auto-approve
-    - Destroy with terraform:
-        - terraform destroy --auto-approve
+    - Manully or Auto Deploy (see [Deployment](#deployment) options below):
 
 ![Rough Diagram](/images/gcp-appstack.png)
 
@@ -74,10 +69,17 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 ## Deployment
 
-For deployment you can do the traditional terraform commands.
+For manual deployment you can do the traditional terraform commands.
 
 ```bash
 terraform init
 terraform plan
 terraform apply --auto-approve
+```
+
+For auto deployment you can do with the deploy.sh and destroy.sh scripts.
+
+```bash
+./deploy
+./destroy
 ```

@@ -137,11 +137,11 @@ For auto deployment you can do with the deploy.sh and destroy.sh scripts.
 ## Troubleshooting
 
 Please refer to the following: 
-- Terraform
-    - [F5 Distributed Cloud Terraform Registry](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
 - F5 Distributed Cloud
     - [F5 Distributed Cloud](https://docs.cloud.f5.com/docs/)
-
+- Terraform
+    - [F5 Distributed Cloud Terraform Registry](https://registry.terraform.io/providers/volterraedge/volterra/latest/docs).
+    
 ## Support
 
 For support, please open a GitHub issue.  Note, the code in this repository is community supported and is not supported by F5 Networks.  For a complete list of supported projects please reference [SUPPORT.md](SUPPORT.md).

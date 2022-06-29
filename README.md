@@ -90,20 +90,28 @@ The goal of this solution is to provide the infrastructure for a working demo to
 | <a name="gcp_region_one_zone_a"></a> [gcp_region_one_zone_a](#inputs\_gcp\_region\_one\_zone\_a) | REQUIRED:  This is your GCP Region One Zone A| `string` | `"us-east4a"` |
 | <a name="gcp_region_one_zone_b"></a> [gcp_region_one_zone_b](#inputs\_gcp\_region\_one\_zone\_b) | REQUIRED:  This is your GCP Region One Zone B| `string` | `"us-east4b"` |
 | <a name="gcp_region_one_zone_c"></a> [gcp_region_one_zone_c](#inputs\_gcp\_region\_one\_zone\_c) | REQUIRED:  This is your GCP Region One Zone C| `string` | `"us-east4c"` |
+| <a name="gcp_cidr_one"></a> [gcp_cidr_one](#inputs\_gcp\_cidr\_one) | REQUIRED:  This is your GCP Region One cidr| `string` | `"10.90.0.0/23"` |
+| <a name="gcp_subnet_one"></a> [gcp_subnet_one](#inputs\_gcp\_subnet\_one) | REQUIRED:  This is your GCP Region One subnet| `string` | `"10.90.0.0/24"` |
 | <a name="gcp_region_two"></a> [gcp_region_two](#inputs\_gcp\_region\_two) | REQUIRED:  This is your GCP Region One | `string` | `"us-west2"` |
 | <a name="gcp_region_one_zone_a"></a> [gcp_region_two_zone_a](#inputs\_gcp\_region\_two\_zone\_a) | REQUIRED:  This is your GCP Region Two Zone A| `string` | `"us-west2a"` |
 | <a name="gcp_region_one_zone_b"></a> [gcp_region_two_zone_b](#inputs\_gcp\_region\_two\_zone\_b) | REQUIRED:  This is your GCP Region Two Zone B| `string` | `"us-west2b"` |
 | <a name="gcp_region_one_zone_c"></a> [gcp_region_two_zone_c](#inputs\_gcp\_region\_two\_zone\_c) | REQUIRED:  This is your GCP Region Two Zone C| `string` | `"us-west2c"` |
+| <a name="gcp_cidr_two"></a> [gcp_cidr_two](#inputs\_gcp\_cidr\_two) | REQUIRED:  This is your GCP Region two cidr| `string` | `"10.90.2.0/23"` |
+| <a name="gcp_subnet_two"></a> [gcp_subnet_two](#inputs\_gcp\_subnet\_two) | REQUIRED:  This is your GCP Region two subnet| `string` | `"10.90.2.0/24"` |
 | <a name="gcp_region_three"></a> [gcp_region_three](#inputs\_gcp\_region\_three) | REQUIRED:  This is your GCP Region One | `string` | `"europe-west3"` |
 | <a name="gcp_region_three_zone_a"></a> [gcp_region_three_zone_a](#inputs\_gcp\_region\_three\_zone\_a) | REQUIRED:  This is your GCP Region Three Zone A| `string` | `"us-europe-west3a"` |
 | <a name="gcp_region_three_zone_b"></a> [gcp_region_three_zone_b](#inputs\_gcp\_region\_three\_zone\_b) | REQUIRED:  This is your GCP Region Three Zone B| `string` | `"us-europe-west3b"` |
 | <a name="gcp_region_three_zone_c"></a> [gcp_region_three_zone_c](#inputs\_gcp\_region\_three\_zone\_c) | REQUIRED:  This is your GCP Region Three Zone C| `string` | `"us-europe-west3c"` |
+| <a name="gcp_cidr_three"></a> [gcp_cidr_three](#inputs\_gcp\_cidr\_three) | REQUIRED:  This is your GCP Region Three cidr| `string` | `"10.90.4.0/23"` |
+| <a name="gcp_subnet_three"></a> [gcp_subnet_three](#inputs\_gcp\_subnet\_three) | REQUIRED:  This is your GCP Region three subnet| `string` | `"10.90.4.0/24"` |
+
 | <a name="gcp_instance_type"></a> [gcp_instance_type](#inputs\_gcp\_instance\_type) | REQUIRED:  This is your GCP Instance Type | `string` | `"n1-stnadard-4"` |
 | <a name="input_sshPublicKey"></a> [sshPublicKey](#input\_sshPublicKey) | OPTIONAL: ssh public key for instances | `string` | `""` |
 | <a name="input_api_p12_file"></a> [api\_p12\_file](#input\_api\_p12\_file) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/f5-xc-lab-app.console.ves.volterra.io.api-creds.p12"` |
 | <a name="input_sshPublicKeyPath"></a> [sshPublicKeyPath](#input\_sshPublicKeyPath) | OPTIONAL: ssh public key path for instances | `string` | `"./creds/id_rsa.pub"` |
 | <a name="input_api_key"></a> [api\_key](#input\_api\_key) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/api.key"` |
-
+| <a name="input_delegated_dns_domain"></a> [delegated\_dns\_domain](#input\_delegated\_dns\_domain) | n/a | `string` | `"user-defined"` |
+| <a name="input_volterra_tf_action"></a> [volterra\_tf\_action](#input\_volterra\_tf\_action) | n/a | `string` | `"apply"` |
 <!-- | <a name="input_name"></a> [name](#input\_name) | REQUIRED:  This is name for your deployment | `string` | `"user-defined"` |
 | <a name="input_api_url"></a> [api\_url](#input\_api\_url) | REQUIRED:  This is your Volterra Namespace | `string` | `"https://f5-sa.console.ves.volterra.io/api"` |
 | <a name="input_region"></a> [region](#input\_region) | Azure Region: US Gov Virginia, US Gov Arizona, etc | `string` | `"Canada Central"` |

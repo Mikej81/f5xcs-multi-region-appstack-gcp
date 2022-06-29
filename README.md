@@ -81,6 +81,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
+| <a name="project_name"></a> [projectname](#inputs\_project\_name) | REQUIRED:  This is your GCP Project Name | `string` | `gcp_project_name` |
 | <a name="input_tenant_name"></a> [tenant\_name](#input\_tenant\_name) | REQUIRED:  This is your Volterra Tenant Name:  https://<tenant\_name>.console.ves.volterra.io/api | `string` | `"f5-xc-lab-app"` |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | REQUIRED:  This is your Volterra Namespace | `string` | `"app1-dev"` |
 | <a name="input_api_cert"></a> [api\_cert](#input\_api\_cert) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/api2.cer"` |

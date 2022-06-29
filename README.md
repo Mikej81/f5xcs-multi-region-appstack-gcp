@@ -55,6 +55,8 @@ The goal of this solution is to provide the infrastructure for a working demo to
     - Manully or Auto Deploy (see [Deployment](#deployment) options below):
 
 ## Topology
+- High Level Topology 
+
 ![Rough Diagram](/images/gcp-appstack.png)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

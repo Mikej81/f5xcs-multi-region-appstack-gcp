@@ -15,7 +15,7 @@ module "xcs" {
   source = "./xcs"
 
   name               = var.name
-  name2              = var.name2
+  # name2              = var.name2
   namespace          = var.namespace
   stack_name         = var.stack_name
   projectName        = var.projectName
@@ -45,6 +45,6 @@ module "xcs" {
   cidr_two           = var.cidr_two
   cidr_three         = var.cidr_three
   tags               = var.tags
-  agility_namespaces = var.agility_namespaces
+  # agility_namespaces = var.agility_namespaces
 
 }

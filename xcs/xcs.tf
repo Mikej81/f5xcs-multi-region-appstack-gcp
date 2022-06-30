@@ -73,7 +73,8 @@ resource "volterra_k8s_cluster" "cluster" {
     cluster_roles {
       tenant    = var.tenant
       namespace = "system"
-      name      = var.name2
+      name      = var.name
+      # name      = var.name2
     }
   }
   use_custom_cluster_role_bindings {
@@ -95,7 +96,8 @@ resource "volterra_k8s_cluster" "cluster" {
     cluster_role_bindings {
       tenant    = var.tenant
       namespace = "system"
-      name      = var.name2
+      name      = var.name
+      # name      = var.name2
     }
   }
 
@@ -113,7 +115,8 @@ resource "volterra_k8s_cluster" "cluster" {
 }
 ###create cluster role ###
 resource "volterra_k8s_cluster_role" "role" {
-  name      = var.name2
+  name      = var.name
+  # name      = var.name2
   namespace = "system"
 
   // One of the arguments from this list "policy_rule_list k8s_cluster_role_selector yaml" must be set
@@ -141,7 +144,8 @@ resource "volterra_k8s_cluster_role" "role" {
 }
 ###create cluster role binding###
 resource "volterra_k8s_cluster_role_binding" "bind" {
-  name      = var.name2
+  name      = var.name
+  # name      = var.name2
   namespace = "system"
 
   k8s_cluster_role {
@@ -190,7 +194,7 @@ resource "volterra_virtual_site" "vsite" {
 resource "volterra_virtual_k8s" "vk8s" {
   name = format("%s-vk8s", var.name)
   # namespace = var.namespace
-  namespace = "s-iannetta"
+  namespace = var.namespace
   vsite_refs {
     name      = volterra_virtual_site.vsite.name
     namespace = "shared"

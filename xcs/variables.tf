@@ -1,5 +1,5 @@
 variable "name" {}
-variable "name2" {}
+# variable "name2" {}
 variable "namespace" {}
 variable "projectName" {}
 variable "projectPrefix" {}
@@ -29,5 +29,5 @@ variable "cidr_two" {}
 variable "cidr_three" {}
 variable "tenant" {}
 variable "stack_name" {}
-variable "agility_namespaces" {}
+
 

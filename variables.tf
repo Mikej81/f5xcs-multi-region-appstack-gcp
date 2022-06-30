@@ -135,11 +135,11 @@ variable "name" {
   description = "REQUIRED:  This is name for your deployment"
   default     = "cust-provided"
 }
-variable "name2" {
-  type        = string
-  description = "REQUIRED:  This is name for your deployment"
-  default     = "cust-provided"
-}
+# variable "name2" {
+#   type        = string
+#   description = "REQUIRED:  This is name for your deployment"
+#   default     = "cust-provided"
+# }
 // Required Variable
 variable "xcs_tf_action" {
   default = "plan"

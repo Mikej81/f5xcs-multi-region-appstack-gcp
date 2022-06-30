@@ -14,8 +14,7 @@ module "util" {
 module "xcs" {
   source = "./xcs"
 
-  name = var.name
-  # name2              = var.name2
+  name             = var.name
   namespace        = var.namespace
   stack_name       = var.stack_name
   projectName      = var.projectName

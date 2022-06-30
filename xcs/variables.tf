@@ -1,5 +1,4 @@
 variable "name" {}
-# variable "name2" {}
 variable "namespace" {}
 variable "projectName" {}
 variable "projectPrefix" {}

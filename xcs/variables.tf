@@ -4,12 +4,18 @@ variable "projectName" {}
 variable "projectPrefix" {}
 variable "url" {}
 variable "api_p12_file" {}
-variable "region_one" {}
-variable "zone_one" {}
-variable "region_two" {}
-variable "zone_two" {}
-variable "region_three" {}
-variable "zone_three" {}
+variable "gcp_region_one" {}
+variable "gcp_zone_one_a" {}
+variable "gcp_zone_one_b" {}
+variable "gcp_zone_one_c" {}
+variable "gcp_region_two" {}
+variable "gcp_zone_two_a" {}
+variable "gcp_zone_two_b" {}
+variable "gcp_zone_two_c" {}
+variable "gcp_region_three" {}
+variable "gcp_zone_three_a" {}
+variable "gcp_zone_three_b" {}
+variable "gcp_zone_three_c" {}
 variable "gateway_type" {}
 variable "xcs_tf_action" {}
 variable "tags" {}
@@ -17,6 +23,10 @@ variable "sshPublicKey" {}
 variable "sshPublicKeyPath" {}
 variable "xcs_tenant" {}
 variable "instance_type" {}
-variable "cidr_one" {}
-variable "cidr_two" {}
-variable "cidr_three" {}
+variable "gcp_cidr_one" {}
+variable "gcp_cidr_two" {}
+variable "gcp_cidr_three" {}
+variable "tenant" {}
+variable "stack_name" {}
+
+

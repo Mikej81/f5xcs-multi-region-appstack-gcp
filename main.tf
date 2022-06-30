@@ -16,15 +16,23 @@ module "xcs" {
 
   name             = var.name
   namespace        = var.namespace
+  stack_name       = var.stack_name
   projectName      = var.projectName
   url              = var.api_url
   api_p12_file     = var.api_p12_file
-  region_one       = var.region_one
-  zone_one         = var.zone_one
-  region_two       = var.region_two
-  zone_two         = var.zone_two
-  region_three     = var.region_three
-  zone_three       = var.zone_three
+  tenant           = var.tenant
+  gcp_region_one   = var.gcp_region_one
+  gcp_zone_one_a   = var.gcp_zone_one_a
+  gcp_zone_one_b   = var.gcp_zone_one_b
+  gcp_zone_one_c   = var.gcp_zone_one_c
+  gcp_region_two   = var.gcp_region_two
+  gcp_zone_two_a   = var.gcp_zone_two_a
+  gcp_zone_two_b   = var.gcp_zone_two_b
+  gcp_zone_two_c   = var.gcp_zone_two_c
+  gcp_region_three = var.gcp_region_three
+  gcp_zone_three_a = var.gcp_zone_three_a
+  gcp_zone_three_b = var.gcp_zone_three_b
+  gcp_zone_three_c = var.gcp_zone_three_c
   projectPrefix    = module.util.env_prefix
   sshPublicKeyPath = var.sshPublicKeyPath
   sshPublicKey     = var.sshPublicKey
@@ -32,8 +40,10 @@ module "xcs" {
   gateway_type     = var.gateway_type
   xcs_tf_action    = var.xcs_tf_action
   instance_type    = var.instance_type
-  cidr_one         = var.cidr_one
-  cidr_two         = var.cidr_two
-  cidr_three       = var.cidr_three
+  gcp_cidr_one     = var.gcp_cidr_one
+  gcp_cidr_two     = var.gcp_cidr_two
+  gcp_cidr_three   = var.gcp_cidr_three
   tags             = var.tags
+  # agility_namespaces = var.agility_namespaces
+
 }

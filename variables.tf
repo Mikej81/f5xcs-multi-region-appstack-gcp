@@ -12,43 +12,82 @@ variable "projectName" {
   description = "REQUIRED: GCP project: "
   default     = "project-name"
 }
-
+variable "tenant" {
+  type        = string
+  description = "REQUIRED: GCP project: "
+  default     = "xc tenant id"
+}
+variable "stack_name" {
+  type        = string
+  description = "REQUIRED: GCP project: "
+  default     = "gcp-app-stack"
+}
 // Required Variable
-variable "region_one" {
+variable "gcp_region_one" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4"
 }
-variable "zone_one" {
+variable "gcp_zone_one_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4-a"
 }
-variable "region_two" {
+variable "gcp_zone_one_b" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-east4-b"
+}
+variable "gcp_zone_one_c" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-east4-c"
+}
+variable "gcp_region_two" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2"
 }
-variable "zone_two" {
+variable "gcp_zone_two_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2-a"
 }
-variable "region_three" {
+variable "gcp_zone_two_b" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-west2-b"
+}
+variable "gcp_zone_two_c" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "us-west2-c"
+}
+variable "gcp_region_three" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "europe-west3"
 }
-variable "zone_three" {
+variable "gcp_zone_three_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "europe-west3-a"
 }
-
+variable "gcp_zone_three_b" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "europe-west3-b"
+}
+variable "gcp_zone_three_c" {
+  type        = string
+  description = "REQUIRED: GCP Region: "
+  default     = "europe-west3-c"
+}
 variable "instance_type" {
   type        = string
   description = "REQUIRED: Instance Type"
   default     = "n1-standard-4"
+  #default = "n1-standard-8"
 }
 
 variable "sshPublicKey" {
@@ -94,8 +133,9 @@ variable "namespace" {
 variable "name" {
   type        = string
   description = "REQUIRED:  This is name for your deployment"
-  default     = "callisto"
+  default     = "cust-provided"
 }
+
 // Required Variable
 variable "xcs_tf_action" {
   default = "plan"
@@ -114,15 +154,15 @@ variable "gateway_type" { default = "voltstack_cluster" }
 
 # NETWORK
 // Required Variable
-variable "cidr_one" {
+variable "gcp_cidr_one" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.0.0/23"
 }
-variable "cidr_two" {
+variable "gcp_cidr_two" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.2.0/23"
 }
-variable "cidr_three" {
+variable "gcp_cidr_three" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.4.0/23"
 }
@@ -155,7 +195,7 @@ variable "tags" {
   type        = map(string)
   default = {
     purpose     = "public"
-    environment = "azure"
+    environment = "gcp"
     owner       = "f5owner"
     group       = "f5group"
     costcenter  = "f5costcenter"
@@ -163,4 +203,11 @@ variable "tags" {
     creator     = "Terraform"
     delete      = "True"
   }
+}
+
+#Coleman Added for Agility
+
+variable "agility_namespaces" {
+  type    = number
+  default = 50
 }

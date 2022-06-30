@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 #Need to check OS / Platform
 osName=`uname -s`

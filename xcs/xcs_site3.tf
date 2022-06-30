@@ -11,7 +11,7 @@ resource "volterra_gcp_vpc_site" "site3" {
     namespace = "system"
   }
 
-  gcp_region    = var.region_three
+  gcp_region    = var.gcp_region_three
   instance_type = var.instance_type
   ssh_key       = var.sshPublicKey
 
@@ -20,7 +20,7 @@ resource "volterra_gcp_vpc_site" "site3" {
   voltstack_cluster {
     gcp_certified_hw = "gcp-byol-voltstack-combo"
 
-    gcp_zone_names = [var.zone_three_a, var.zone_three_b, var.zone_three_c]
+    gcp_zone_names = [var.gcp_zone_three_a, var.gcp_zone_three_b, var.gcp_zone_three_c]
 
     node_number = "3"
 
@@ -32,7 +32,7 @@ resource "volterra_gcp_vpc_site" "site3" {
     site_local_subnet {
       new_subnet {
         subnet_name  = format("%s-subnet-three", var.name)
-        primary_ipv4 = var.cidr_three
+        primary_ipv4 = var.gcp_cidr_three
       }
     }
 

@@ -23,62 +23,62 @@ variable "stack_name" {
   default     = "gcp-app-stack"
 }
 // Required Variable
-variable "region_one" {
+variable "gcp_region_one" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4"
 }
-variable "zone_one_a" {
+variable "gcp_zone_one_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4-a"
 }
-variable "zone_one_b" {
+variable "gcp_zone_one_b" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4-b"
 }
-variable "zone_one_c" {
+variable "gcp_zone_one_c" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-east4-c"
 }
-variable "region_two" {
+variable "gcp_region_two" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2"
 }
-variable "zone_two_a" {
+variable "gcp_zone_two_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2-a"
 }
-variable "zone_two_b" {
+variable "gcp_zone_two_b" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2-b"
 }
-variable "zone_two_c" {
+variable "gcp_zone_two_c" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "us-west2-c"
 }
-variable "region_three" {
+variable "gcp_region_three" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "europe-west3"
 }
-variable "zone_three_a" {
+variable "gcp_zone_three_a" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "europe-west3-a"
 }
-variable "zone_three_b" {
+variable "gcp_zone_three_b" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "europe-west3-b"
 }
-variable "zone_three_c" {
+variable "gcp_zone_three_c" {
   type        = string
   description = "REQUIRED: GCP Region: "
   default     = "europe-west3-c"
@@ -158,15 +158,15 @@ variable "gateway_type" { default = "voltstack_cluster" }
 
 # NETWORK
 // Required Variable
-variable "cidr_one" {
+variable "gcp_cidr_one" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.0.0/23"
 }
-variable "cidr_two" {
+variable "gcp_cidr_two" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.2.0/23"
 }
-variable "cidr_three" {
+variable "gcp_cidr_three" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.4.0/23"
 }

@@ -85,7 +85,7 @@ The goal of this solution is to provide the infrastructure for a working demo to
 | <a name="input_tenant_name"></a> [tenant\_name](#input\_tenant\_name) | REQUIRED:  This is your Volterra Tenant Name:  https://<tenant\_name>.console.ves.volterra.io/api | `string` | `"f5-xc-lab-app"` |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | REQUIRED:  This is your Volterra Namespace | `string` | `"app1-dev"` |
 | <a name="input_api_cert"></a> [api\_cert](#input\_api\_cert) | REQUIRED:  This is the path to the Volterra API Key.  See https://volterra.io/docs/how-to/user-mgmt/credentials | `string` | `"./creds/api2.cer"` |
-| <a name="name"></a> [stackname](#inputs\_name) | REQUIRED:  This is your Distributed Cloud prefix name | `string` | `"cust-provided"` |
+| <a name="name"></a> [name](#inputs\_name) | REQUIRED:  This is your Distributed Cloud prefix name | `string` | `"cust-provided"` |
 | <a name="stack_name"></a> [stackname](#inputs\_stack\_name) | REQUIRED:  This is your Distributed Cloud AppStack name | `string` | `"gcp-app-stack"` |
 | <a name="gcp_region_one"></a> [gcp_region_one](#inputs\_gcp\_region\_one) | REQUIRED:  This is your GCP Region One | `string` | `"us-east4"` |
 | <a name="gcp_region_one_zone_a"></a> [gcp_region_one_zone_a](#inputs\_gcp\_region\_one\_zone\_a) | REQUIRED:  This is your GCP Region One Zone A| `string` | `"us-east4a"` |

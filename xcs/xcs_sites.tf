@@ -2,9 +2,6 @@ data google_compute_zones available {
   count  = length(var.gcp_regions)
   region = var.gcp_regions[count.index]
 }
-output zones {
-  value = data.google_compute_zones.available
-}
 
 resource "volterra_gcp_vpc_site" "sites" {
   count     = length(var.gcp_regions)

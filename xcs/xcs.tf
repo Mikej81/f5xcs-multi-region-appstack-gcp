@@ -56,48 +56,38 @@ resource "volterra_k8s_cluster" "cluster" {
   use_default_cluster_roles         = false
   use_custom_cluster_role_list {
     cluster_roles {
-      tenant    = var.tenant
       namespace = "system"
       name      = "admin"
     }
     cluster_roles {
-      tenant    = "ves-io"
       namespace = "system"
       name      = "ves-io-psp-permissive"
     }
     cluster_roles {
-      tenant    = "ves-io"
       namespace = "system"
       name      = "ves-io-admin-cluster-role"
     }
     cluster_roles {
-      tenant    = var.tenant
       namespace = "system"
       name      = var.name
-      # name      = var.name2
     }
   }
   use_custom_cluster_role_bindings {
     cluster_role_bindings {
-      tenant    = var.tenant
       namespace = "system"
       name      = "admin"
     }
     cluster_role_bindings {
-      tenant    = var.tenant
       namespace = "system"
       name      = "ves-io-admin-cluster-role-binding"
     }
     cluster_role_bindings {
-      tenant    = "ves-io"
       namespace = "shared"
       name      = "ves-io-psp-permissive"
     }
     cluster_role_bindings {
-      tenant    = var.tenant
       namespace = "system"
       name      = var.name
-      # name      = var.name2
     }
   }
 

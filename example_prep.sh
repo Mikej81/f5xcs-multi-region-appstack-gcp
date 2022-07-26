@@ -43,14 +43,15 @@ export GCP_ACCOUNT_ID=xcs-gcp-vpc-spn
 
 # Download Role Def
 # Based on https://gitlab.com/volterra.io/cloud-credential-templates/-/tree/master/gcp
-curl https://gitlab.com/volterra.io/cloud-credential-templates/-/raw/master/gcp/volterra_gcp_vpc_role.yaml?inline=false --output volterra_gcp_vpc_role.yaml
+curl https://gitlab.com/volterra.io/cloud-credential-templates/-/raw/master/gcp/f5xc_gcp_vpc_role.yaml --output volterra_gcp_vpc_role.yaml
+
 #Create GCP Role
 gcloud iam roles create $GCP_ROLE_ID --project=$GCP_PROJECT --file=volterra_gcp_vpc_role.yaml
 # Create GCP Service Account
-gcloud iam service-accounts create $GCP_ACCOUNT_ID  --display-name=$GCP_ACCOUNT_ID
+gcloud iam service-accounts create $GCP_ACCOUNT_ID  --display-name=$GCP_ACCOUNT_ID --project=$GCP_PROJECT
 
-export GCP_SVC_EMAIL=`gcloud iam service-accounts list | grep $GCP_ACCOUNT_ID | awk '{print $2}'`
+export GCP_SVC_EMAIL=`gcloud iam service-accounts list --project=$GCP_PROJECT | grep $GCP_ACCOUNT_ID | awk '{print $2}'`
 
-gcloud projects add-iam-policy-binding $GCP_PROJECT --member='serviceAccount:'$GCP_SVC_EMAIL'' --role=projects/$GCP_PROJECT/roles/$GCP_ROLE_ID
+gcloud projects add-iam-policy-binding $GCP_PROJECT --member='serviceAccount:'$GCP_SVC_EMAIL'' --role=projects/$GCP_PROJECT/roles/$GCP_ROLE_ID --project=$GCP_PROJECT
 
-gcloud iam service-accounts keys create --iam-account $GCP_SVC_EMAIL key.json
+gcloud iam service-accounts keys create --iam-account $GCP_SVC_EMAIL key.json --project=$GCP_PROJECT

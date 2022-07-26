@@ -28,5 +28,11 @@ variable "gcp_cidr_two" {}
 variable "gcp_cidr_three" {}
 variable "tenant" {}
 variable "stack_name" {}
+variable "gcp_cidrs" {
+    type = list(string)
+}
+variable "gcp_regions"{
+    type = list(string)
+}
 
 

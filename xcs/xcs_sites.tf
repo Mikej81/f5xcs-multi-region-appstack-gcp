@@ -1,5 +1,11 @@
-resource "volterra_gcp_vpc_site" "site1" {
-  name      = format("%s-vpc-site-one", var.name)
+data google_compute_zones available {
+  count  = length(var.gcp_regions)
+  region = var.gcp_regions[count.index]
+}
+
+resource "volterra_gcp_vpc_site" "sites" {
+  count     = length(var.gcp_regions)
+  name      = format("%s-vpc-site-%02d", var.name, count.index)
   namespace = "system"
 
   labels = {
@@ -11,7 +17,7 @@ resource "volterra_gcp_vpc_site" "site1" {
     namespace = "system"
   }
 
-  gcp_region    = var.gcp_region_one
+  gcp_region    = var.gcp_regions[count.index]
   instance_type = var.instance_type
   ssh_key       = var.sshPublicKey
 
@@ -20,8 +26,7 @@ resource "volterra_gcp_vpc_site" "site1" {
   voltstack_cluster {
     gcp_certified_hw = "gcp-byol-voltstack-combo"
 
-    gcp_zone_names = [var.gcp_zone_one_a, var.gcp_zone_one_b, var.gcp_zone_one_c]
-    # gcp_zone_names = ["us-west1-a, us-west1-b, us-west1-c"]
+    gcp_zone_names = data.google_compute_zones.available[count.index].names
 
     node_number = "3"
 
@@ -32,8 +37,8 @@ resource "volterra_gcp_vpc_site" "site1" {
     }
     site_local_subnet {
       new_subnet {
-        subnet_name  = format("%s-subnet-one", var.name)
-        primary_ipv4 = var.gcp_cidr_one
+        subnet_name  = format("%s-subnet-%02d", var.name, count.index)
+        primary_ipv4 = var.gcp_cidrs[count.index]
       }
     }
 
@@ -62,8 +67,9 @@ resource "volterra_gcp_vpc_site" "site1" {
 
 }
 
-resource "volterra_tf_params_action" "action1" {
-  site_name       = volterra_gcp_vpc_site.site1.name
+resource "volterra_tf_params_action" "actions" {
+  count           = length(var.gcp_regions)
+  site_name       = volterra_gcp_vpc_site.sites[count.index].name
   site_kind       = "gcp_vpc_site"
   action          = var.xcs_tf_action
   wait_for_action = true

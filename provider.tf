@@ -3,7 +3,7 @@ terraform {
   required_providers {
     volterrarm = {
       source  = "volterraedge/volterra"
-      version = "0.11.6"
+      version = "0.11.9"
     }
     google = {
       source  = "hashicorp/google"
@@ -18,7 +18,7 @@ terraform {
 
 provider "google" {
   project = var.projectName
-  region  = var.location
+  region  = var.gcp_region_one
 }
 
 provider "volterrarm" {

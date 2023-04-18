@@ -3,11 +3,11 @@ terraform {
   required_providers {
     volterrarm = {
       source  = "volterraedge/volterra"
-      version = "0.11.9"
+      version = "0.11.21"
     }
     google = {
       source  = "hashicorp/google"
-      version = "4.15.0"
+      version = "4.61.0"
     }
     http = {
       source  = "hashicorp/http"

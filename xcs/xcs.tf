@@ -3,7 +3,7 @@ terraform {
   required_providers {
     volterra = {
       source  = "volterraedge/volterra"
-      version = "0.11.9"
+      version = "0.11.21"
     }
   }
 }
@@ -105,7 +105,7 @@ resource "volterra_k8s_cluster" "cluster" {
 }
 ###create cluster role ###
 resource "volterra_k8s_cluster_role" "role" {
-  name      = var.name
+  name = var.name
   # name      = var.name2
   namespace = "system"
 
@@ -134,7 +134,7 @@ resource "volterra_k8s_cluster_role" "role" {
 }
 ###create cluster role binding###
 resource "volterra_k8s_cluster_role_binding" "bind" {
-  name      = var.name
+  name = var.name
   # name      = var.name2
   namespace = "system"
 

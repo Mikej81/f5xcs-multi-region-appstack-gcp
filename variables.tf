@@ -22,6 +22,13 @@ variable "stack_name" {
   description = "REQUIRED: GCP project: "
   default     = "gcp-app-stack"
 }
+
+variable "cluster_size" {
+  type        = string
+  description = "REQUIRED: Sets Cluster size to single node or 3 node; use 1 or 3."
+  default     = "1"
+}
+
 // Required Variable
 variable "gcp_region_one" {
   type        = string
@@ -154,15 +161,15 @@ variable "gateway_type" { default = "voltstack_cluster" }
 
 # NETWORK
 // Required Variable
-variable "gcp_cidr_one" {
+variable "cidr_one" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.0.0/23"
 }
-variable "gcp_cidr_two" {
+variable "cidr_two" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.2.0/23"
 }
-variable "gcp_cidr_three" {
+variable "cidr_three" {
   description = "REQUIRED: VNET Network CIDR"
   default     = "10.90.4.0/23"
 }
